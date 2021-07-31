@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     *{
@@ -9,6 +9,11 @@ export const GlobalStyles = createGlobalStyle`
 
     *, input, button {
         font-family: Roboto, Ubuntu, sans-serif;
+    }
+
+    body {
+      background: ${(props) => props.theme.colors.background};
+      color: ${(props) => props.theme.colors.text};
     }
 
     .colored:nth-child(1) {
