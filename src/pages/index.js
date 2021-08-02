@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import DefaultContent from '../components/DefaultContent';
-import { ModelsWrapper, ModelSection } from '../components/Model';
-import { Container } from './styles';
+import Head from 'next/head'
+import DefaultOverlayContent from '../components/DefaultOverlayContent'
+import { ModelsWrapper, ModelSection } from '../components/Model'
+import { Container } from './styles'
 
 function HomePage() {
   return (
@@ -20,21 +20,24 @@ function HomePage() {
               'Filme 5',
               'Filme 6',
               'Filme 7',
-            ]}
-            <ModelSection
-              modelName="Model One"
-              overlayNode={
-                <DefaultContent
-                  label="Model One"
-                  description="Order online for delivery"
-                />
-              }
-            />
+            ].map(modelName => (
+              <ModelSection
+                key={modelName}
+                className={'colored'}
+                modelName={modelName}
+                overlayNode={
+                  <DefaultOverlayContent
+                    label={modelName}
+                    description="Order online for delivery"
+                  />
+                }
+              />
+            ))}
           </div>
         </ModelsWrapper>
       </Container>
     </>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

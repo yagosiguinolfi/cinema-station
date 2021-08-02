@@ -1,7 +1,7 @@
-import { Container } from "./styles";
+import { Container } from './styles'
 
 function ModelSection({ modelName, overlayNode, children, ...props }) {
-  return <Container {...props}>{children}</Container>;
+  return <Container {...props}>{children}</Container>
 }
 
-export default ModelSection;
+export default ModelSection
