@@ -1,8 +1,46 @@
 (function() {
 var exports = {};
 exports.id = 405;
-exports.ids = [405,359];
+exports.ids = [405,494];
 exports.modules = {
+
+/***/ 800:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Container": function() { return /* binding */ Container; },
+/* harmony export */   "Heading": function() { return /* binding */ Heading; },
+/* harmony export */   "Buttons": function() { return /* binding */ Buttons; },
+/* harmony export */   "Content": function() { return /* binding */ Content; },
+/* harmony export */   "Title": function() { return /* binding */ Title; }
+/* harmony export */ });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(914);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
+  displayName: "_styles__Container",
+  componentId: "sc-z3uf8w-0"
+})([""]);
+const Heading = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
+  displayName: "_styles__Heading",
+  componentId: "sc-z3uf8w-1"
+})([""]);
+const Buttons = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
+  displayName: "_styles__Buttons",
+  componentId: "sc-z3uf8w-2"
+})([""]);
+const Content = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
+  displayName: "_styles__Content",
+  componentId: "sc-z3uf8w-3"
+})(["display:flex;flex-direction:row;align-items:center;justify-content:center;"]);
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_0___default().h1.withConfig({
+  displayName: "_styles__Title",
+  componentId: "sc-z3uf8w-4"
+})([""]);
+
+/***/ }),
 
 /***/ 165:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -92,6 +130,8 @@ const styles_Buttons = external_styled_components_default().div.withConfig({
 ;// CONCATENATED MODULE: ./src/components/Model/ModelsWrapper/index.js
 
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 
 
 
@@ -109,7 +149,7 @@ function ModelsWrapper({
   const unregisterModel = (0,external_react_.useCallback)(modelName => {
     setRegisteredModels(state => state.filter(model => model.modelName !== modelName));
   }, []);
-  const getMovieByName = (0,external_react_.useCallback)(modelName => registeredModels.find(model => model.mdoelName === modelName) || null, [registeredModels]);
+  const getMovieByName = (0,external_react_.useCallback)(modelName => registeredModels.find(model => model.mdoelName === modelName) || null);
   return /*#__PURE__*/jsx_runtime_.jsx(Model_ModelsContext.Provider, {
     value: {
       wrapperRef,
@@ -173,8 +213,8 @@ function ModelSection(_ref) {
 ;// CONCATENATED MODULE: ./src/components/Model/index.js
 
 
-// EXTERNAL MODULE: ./src/pages/styles.js
-var styles = __webpack_require__(984);
+// EXTERNAL MODULE: ./src/pages/_styles.js
+var _styles = __webpack_require__(800);
 ;// CONCATENATED MODULE: ./src/pages/index.js
 
 
@@ -205,7 +245,7 @@ function HomePage() {
       children: /*#__PURE__*/jsx_runtime_.jsx("title", {
         children: "Cinema Station"
       })
-    }), /*#__PURE__*/jsx_runtime_.jsx(styles.Container, {
+    }), /*#__PURE__*/jsx_runtime_.jsx(_styles.Container, {
       children: /*#__PURE__*/jsx_runtime_.jsx(Model_ModelsWrapper, {
         children: /*#__PURE__*/jsx_runtime_.jsx("div", {
           children: pageMovies.map(movie => /*#__PURE__*/jsx_runtime_.jsx(Model_ModelSection, {
@@ -216,12 +256,12 @@ function HomePage() {
               label: movie.title,
               description: movie.overview
             }),
-            children: /*#__PURE__*/(0,jsx_runtime_.jsxs)(styles.Content, {
+            children: /*#__PURE__*/(0,jsx_runtime_.jsxs)(_styles.Content, {
               children: [/*#__PURE__*/jsx_runtime_.jsx("div", {}), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
                 style: {
                   maxWidth: '30%'
                 },
-                children: [/*#__PURE__*/jsx_runtime_.jsx(styles.Title, {
+                children: [/*#__PURE__*/jsx_runtime_.jsx(_styles.Title, {
                   children: movie.title
                 }), /*#__PURE__*/jsx_runtime_.jsx("div", {
                   children: /*#__PURE__*/jsx_runtime_.jsx("p", {
@@ -238,44 +278,6 @@ function HomePage() {
 }
 
 /* harmony default export */ var pages = (HomePage);
-
-/***/ }),
-
-/***/ 984:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Container": function() { return /* binding */ Container; },
-/* harmony export */   "Heading": function() { return /* binding */ Heading; },
-/* harmony export */   "Buttons": function() { return /* binding */ Buttons; },
-/* harmony export */   "Content": function() { return /* binding */ Content; },
-/* harmony export */   "Title": function() { return /* binding */ Title; }
-/* harmony export */ });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(914);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-  displayName: "styles__Container",
-  componentId: "sc-1dery8-0"
-})([""]);
-const Heading = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-  displayName: "styles__Heading",
-  componentId: "sc-1dery8-1"
-})([""]);
-const Buttons = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-  displayName: "styles__Buttons",
-  componentId: "sc-1dery8-2"
-})([""]);
-const Content = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-  displayName: "styles__Content",
-  componentId: "sc-1dery8-3"
-})(["display:flex;flex-direction:row;align-items:center;justify-content:center;"]);
-const Title = styled_components__WEBPACK_IMPORTED_MODULE_0___default().h1.withConfig({
-  displayName: "styles__Title",
-  componentId: "sc-1dery8-4"
-})([""]);
 
 /***/ }),
 

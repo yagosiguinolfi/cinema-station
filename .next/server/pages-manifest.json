@@ -1,9 +1,8 @@
 {
-  "/Details/[movie]": "pages/Details/[movie].js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/_styles": "pages/_styles.js",
   "/api/_api": "pages/api/_api.js",
   "/": "pages/index.js",
-  "/styles": "pages/styles.js",
   "/_error": "pages/_error.js"
 }
