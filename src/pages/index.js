@@ -23,6 +23,7 @@ function HomePage() {
       });
   }, []);
 
+
   return (
     <>
       <Head>
@@ -30,11 +31,11 @@ function HomePage() {
       </Head>
       <Container>
         <Content>
-        {pageMovies.map(movie=>
-          <MoviePreview
-          key={movie.id}
-          movie={movie}
-          />)}
+          {pageMovies.map(movie =>
+            <MoviePreview
+              key={movie.id}
+              movie={movie}
+            />)}
           {/* <div>
             <img
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
