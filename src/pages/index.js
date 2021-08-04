@@ -43,10 +43,10 @@ function HomePage() {
               >
                 <Content>
                   <div>
-                    {/* <img
+                    <img
                       src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                       alt=""
-                    /> */}
+                    />
                   </div>
                   <div style={{ maxWidth: '30%' }}>
                     <Title>{movie.title}</Title>
