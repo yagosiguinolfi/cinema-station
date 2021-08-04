@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useRef, useState } from 'react'
 import ModelsContext from '../ModelsContext'
 import { Container } from './styles'
@@ -10,13 +11,14 @@ function ModelsWrapper({ children }) {
   }, [])
   const unregisterModel = useCallback(modelName => {
     setRegisteredModels(state =>
-      state.filter(model => model.modelName != mdoelName)
+      state.filter(model => model.modelName !== modelName)
     )
   }, [])
 
-  const getMovieByName = useCallback(modelName => {
-    return registeredModel.find(model => model.mdoelName === modelName) || null
-  })
+  const getMovieByName = useCallback(
+    modelName =>
+      registeredModels.find(model => model.mdoelName === modelName) || null
+  )
 
   return (
     <ModelsContext.Provider
@@ -25,7 +27,7 @@ function ModelsWrapper({ children }) {
         registeredModels,
         registerModel,
         unregisterModel,
-        getMovieByName,
+        getMovieByName
       }}
     >
       <Container ref={wrapperRef}>{children}</Container>

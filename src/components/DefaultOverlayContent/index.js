@@ -1,3 +1,4 @@
+import React from 'react'
 import { Container, Heading, Buttons } from './styles'
 
 function DefaultOverlayContent({ label, description }) {
@@ -9,7 +10,7 @@ function DefaultOverlayContent({ label, description }) {
       </Heading>
 
       <Buttons>
-        <button>Show details</button>
+        <button type="button">Show details</button>
       </Buttons>
     </Container>
   )

@@ -4,7 +4,13 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "eslint:recommended",
+    "prettier",
+    "next"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -12,16 +18,21 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "prettier"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/jsx-props-no-spreading": [
-      1,
-      {
-        "html": "ignore",
-        "custom": "ignore",
-        "explicitSpread": "ignore"
-      }
-    ]
+    "no-unused-vars": [2, {"args": "after-used"}],
+    "react/jsx-props-no-spreading": ["off"],
+    "react-hooks/exhaustive-deps": "warn"
+    // "prettier/prettier": "error",
+    // "react/no-unescaped-entities": "off",
+    // "@next/next/no-page-custom-font": "off",
+    // "space-before-function-paren": "off",
+    // "react/prop-types": "off",
+    // "semi": [2, "never"],
+    // "comma-dangle": ["error", "never"],
+    // "func-names": ["error", "never"],
+    // "arrow-parens": ["error", "as-needed"],
+    // "no-unused-vars": ["error", { "args": "none" }]
   }
 }
