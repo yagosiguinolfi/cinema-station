@@ -3,7 +3,7 @@ import axios from 'axios';
 import Head from 'next/head';
 import DefaultOverlayContent from '../components/DefaultOverlayContent';
 import { ModelsWrapper, ModelSection } from '../components/Model';
-import { Container, Content, Title } from './_styles';
+import { Container, Content, Title } from '../styles/styles';
 
 function HomePage() {
   const [pageMovies, setPageMovies] = useState([]);
