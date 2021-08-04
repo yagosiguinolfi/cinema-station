@@ -1,13 +1,16 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import DefaultOverlayContent from '../components/DefaultOverlayContent';
-import { ModelsWrapper, ModelSection } from '../components/Model';
+import { MoviesWrapper, MovieSection } from '../components/Movie';
 import { Container, Content, Title } from './_styles';
+import MoviePreview from '../components/Movie/MoviePreview';
 
 function HomePage() {
   const [pageMovies, setPageMovies] = useState([]);
-  const [, setData] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
@@ -26,14 +29,32 @@ function HomePage() {
         <title>Cinema Station</title>
       </Head>
       <Container>
-        <ModelsWrapper>
+        <Content>
+        {pageMovies.map(movie=>
+          <MoviePreview
+          key={movie.id}
+          movie={movie}
+          />)}
+          {/* <div>
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              alt=""
+            />
+          </div>
+          <div style={{ maxWidth: '30%' }}>
+            <Title>{movie.title}</Title>
+            <div>
+              <p>{movie.overview}</p>
+            </div>
+          </div> */}
+        </Content>
+        {/* <MoviesWrapper>
           <div>
             {pageMovies.map((movie) => (
-              <ModelSection
+              <MovieSection
                 key={movie.id}
-                // className={'colored'}
                 backgroundImage={movie.poster_path}
-                modelName={movie.title}
+                movieName={movie.title}
                 overlayNode={(
                   <DefaultOverlayContent
                     label={movie.title}
@@ -41,24 +62,11 @@ function HomePage() {
                   />
                 )}
               >
-                <Content>
-                  <div>
-                    <img
-                      src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                      alt=""
-                    />
-                  </div>
-                  <div style={{ maxWidth: '30%' }}>
-                    <Title>{movie.title}</Title>
-                    <div>
-                      <p>{movie.overview}</p>
-                    </div>
-                  </div>
-                </Content>
-              </ModelSection>
+               
+              </MovieSection>
             ))}
           </div>
-        </ModelsWrapper>
+        </MoviesWrapper> */}
       </Container>
     </>
   );
