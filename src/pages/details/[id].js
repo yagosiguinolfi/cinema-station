@@ -36,16 +36,13 @@ export async function getStaticProps({params}) {
 export async function getStaticPaths() {
   const data = await axios.get(
     `3/movie/upcoming?api_key=fe65f8e840e15d06c5c00bf13084da74&language=pt-BR&page=1`)
-    .then((response) => response.data)
-  console.log(data.results[0].id)
+    .then((response) => response.data.results)
 
-  const paths = data.results.map((movie) => ({
-    params: { id: movie.id.toString() }
+  const paths = data.map((movie) => ({
+    params: { id: String(movie.id) }
   }))
-  console.log(paths)
   return { paths, fallback: false }
 }
-
 
 function Details({movie}) {
   return <Container>
