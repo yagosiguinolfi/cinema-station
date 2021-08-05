@@ -5,5 +5,11 @@ export const Container = styled.div`
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 `
-export const Heading = styled.div``
-export const Buttons = styled.div``
+export const OverlaysRoot = styled.div`
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+`
+
