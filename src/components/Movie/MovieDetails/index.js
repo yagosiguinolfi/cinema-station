@@ -12,11 +12,11 @@ function MovieDetails({ movie }) {
   return <Container>
     <Content>
       <ViewImage>
-        <img alt="" src={`https://image.tmdb.org/t/p/w185/${movie?.poster_path}`} />
+        <img alt="" src={`https://image.tmdb.org/t/p/w200/${movie?.poster_path}`} />
       </ViewImage>
       <ViewDescription>
         <Title>{movie?.title}</Title>
-        <ReleaseDate>{`Release date: ${movie?.release_date}`}</ReleaseDate>
+        <ReleaseDate>{`Data de lançamento: ${movie?.release_date}`}</ReleaseDate>
         <Description>{movie?.overview}</Description>
         <Link
           href={{

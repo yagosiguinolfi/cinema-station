@@ -21,5 +21,5 @@ export const Content = styled.div`
 `
 export const Title = styled.h1``
 export const ViewImage = styled.div`
-  height: 20vh;
+  height: 18vh;
 `

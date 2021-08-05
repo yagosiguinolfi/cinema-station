@@ -38,7 +38,7 @@ function HomePage (props) {
       <Container>
         <Header>         
           <ViewImage>
-            <Image src={logoCineS} alt="cinema-station-logo" width='180' height='180'/>
+            <Image src={logoCineS} alt="cinema-station-logo" width='160' height='160'/>
           </ViewImage>         
         </Header>
         <Content>
