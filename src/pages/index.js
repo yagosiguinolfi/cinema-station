@@ -1,23 +1,26 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import axios from 'axios';
-import Head from 'next/head';
-import DefaultOverlayContent from '../components/DefaultOverlayContent';
-import { MoviesWrapper, MovieSection } from '../components/Movie';
-import { Container, Content, Title } from '../styles/index';
-import MoviePreview from '../components/Movie/MoviePreview';
+import React from 'react'
+import axios from 'axios'
+import Head from 'next/head'
+import Image from 'next/image'
+import DefaultOverlayContent from '../components/DefaultOverlayContent'
+import { MoviesWrapper, MovieSection } from '../components/Movie'
+import { Container, Content, Title, Header, ViewImage } from '../styles/index'
+import MoviePreview from '../components/Movie/MoviePreview'
+import iconCineS from '../../public/assets/cine-station-icon.ico'
+import logoCineS from '../../public/assets/cine-station-logo.png'
 
 export async function getStaticProps(context) {
     const data = await axios
       .get(
-        '3/movie/upcoming?api_key=fe65f8e840e15d06c5c00bf13084da74&language=pt-BR&page=1',
+        '3/movie/upcoming?api_key=fe65f8e840e15d06c5c00bf13084da74&language=pt-BR&page=1'
       )
-      .then(async (response) => response.data);
+      .then(async (response) => response.data)
   return {
     props: {
       data
-    }, 
+    } 
   }
 }
 
@@ -27,9 +30,17 @@ function HomePage (props) {
   return (
     <>
       <Head>
+        {/* <Image src={iconCineS} alt="cinema-station-icon" /> */}
+        <link rel="cine-icon" href={iconCineS} type="image/ico" />
         <title>Cinema Station</title>
+        <meta name="cinema-station" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Container>
+        <Header>         
+          <ViewImage>
+            <Image src={logoCineS} alt="cinema-station-logo" width='180' height='180'/>
+          </ViewImage>         
+        </Header>
         <Content>
           {data.results.map(movie =>
             <MoviePreview
@@ -58,7 +69,7 @@ function HomePage (props) {
         </MoviesWrapper> */}
       </Container>
     </>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

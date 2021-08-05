@@ -18,20 +18,44 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": [
+    "react",
+    "prettier"
+  ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "no-unused-vars": [2, {"args": "after-used"}],
-    "react/jsx-props-no-spreading": ["off"],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "no-unused-vars": [
+      2,
+      {
+        "args": "after-used"
+      }
+    ],
+    "react/jsx-props-no-spreading": [
+      "off"
+    ],
     "react-hooks/exhaustive-deps": "warn",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
     // "prettier/prettier": "error",
     // "react/no-unescaped-entities": "off",
     // "@next/next/no-page-custom-font": "off",
     // "space-before-function-paren": "off",
     // "react/prop-types": "off",
-    // "semi": [2, "never"],
-    // "comma-dangle": ["error", "never"],
+    "semi": [
+      2,
+      "never"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ]
     // "func-names": ["error", "never"],
     // "arrow-parens": ["error", "as-needed"],
     // "no-unused-vars": ["error", { "args": "none" }]

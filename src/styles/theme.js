@@ -1,8 +1,9 @@
 const theme = {
   colors: {
-    background: '#1c1c2e',
+    background: '#222222',
     text: '#e0e0e3',
-    primary: '#2255ee',
-  },
-};
-export default theme;
+    primary: '#8C52FF',
+    secondary: '#00C2CB'
+  }
+}
+export default theme
