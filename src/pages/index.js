@@ -11,6 +11,7 @@ import MoviePreview from '../components/Movie/MoviePreview'
 import iconCineS from '../../public/assets/cine-station-icon.ico'
 import logoCineS from '../../public/assets/cine-station-logo.png'
 
+
 export async function getStaticProps(context) {
     const data = await axios
       .get(

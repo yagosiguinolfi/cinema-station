@@ -1,6 +1,9 @@
 module.exports = {
   devIndicators: {
     autoPrerender: false
-  },
-  trailingSlash: true
+  }
+  // trailingSlash: true,
+  // images: {
+  //   disableStaticImages: true
+  // }
 }
